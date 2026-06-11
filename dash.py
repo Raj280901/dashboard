@@ -295,8 +295,8 @@ def math_subject_difficulty(df, s_names):
     st.plotly_chart(fig_b, width='stretch')
 
 def download_file():
-    url = "https://github.com/Raj280901/dashboard/raw/refs/heads/main/StudentData_File1.xlsx"
-    response = requests.get(url)
+    url1 = "https://github.com/Raj280901/dashboard/raw/refs/heads/main/StudentData_File1.xlsx"
+    response = requests.get(url1)
     if response.status_code == 200:
         return response.content
     else:
