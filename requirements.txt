@@ -1,5 +1,5 @@
 streamlit
+requests
 streamlit-option-menu
 plotly
 openpyxl
-requests
