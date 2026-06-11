@@ -294,8 +294,26 @@ def math_subject_difficulty(df, s_names):
 
     st.plotly_chart(fig_b, width='stretch')
 
+def download_file():
+    url = "https://github.com/Raj280901/dashboard/raw/refs/heads/main/StudentData_File1.xlsx"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.content
+    else:
+        st.error("Failed to fetch demo file")
+        return None
+
 st.write("Hello")
 # path = "C:\\Users\\Raj Gandhi\\Downloads\\output\\data.xlsx"
+
+file_data = download_file()
+if file_data:
+    st.download_button(
+        label="Download Demo file",
+        data=file_data,
+        file_name="Student_data_demo.xlsx",
+        mime="text/xlsx"
+    )
 
 df = upload_file()
 if df:
