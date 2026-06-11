@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from streamlit_option_menu import option_menu
 import plotly.express as px
+import requests
 
 def upload_file():
     upload_file = st.file_uploader("Choose an excel file to be uploaded: ", type=["xlsx", "xls"])
